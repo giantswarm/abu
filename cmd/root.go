@@ -21,6 +21,10 @@ var (
 	DOLLAR         = "($)"
 	ESTIMATED_EURO = "(~€)"
 
+	BILL                      = "BILL"
+	BILL_DOLLAR_TITLE         = strings.Join([]string{BILL, DOLLAR}, " ")
+	BILL_ESTIMATED_EURO_TITLE = strings.Join([]string{BILL, ESTIMATED_EURO}, " ")
+
 	COST                      = "COST"
 	COST_DOLLAR_TITLE         = strings.Join([]string{COST, DOLLAR}, " ")
 	COST_ESTIMATED_EURO_TITLE = strings.Join([]string{COST, ESTIMATED_EURO}, " ")
