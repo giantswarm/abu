@@ -19,13 +19,13 @@ var (
 	SUSPENDED_TITLE = "SUSP."
 
 	DOLLAR         = "($)"
-	ESTIMATED_EURO = "(EST. €)"
+	ESTIMATED_EURO = "(~€)"
 
 	COST                      = "COST"
 	COST_DOLLAR_TITLE         = strings.Join([]string{COST, DOLLAR}, " ")
 	COST_ESTIMATED_EURO_TITLE = strings.Join([]string{COST, ESTIMATED_EURO}, " ")
 
-	FORECAST                      = "FORECAST"
+	FORECAST                      = "FCAST"
 	FORECAST_DOLLAR_TITLE         = strings.Join([]string{FORECAST, DOLLAR}, " ")
 	FORECAST_ESTIMATED_EURO_TITLE = strings.Join([]string{FORECAST, ESTIMATED_EURO}, " ")
 
@@ -33,12 +33,14 @@ var (
 	BUDGET_DOLLAR_TITLE         = strings.Join([]string{BUDGET, DOLLAR}, " ")
 	BUDGET_ESTIMATED_EURO_TITLE = strings.Join([]string{BUDGET, ESTIMATED_EURO}, " ")
 
-	DELTA                      = "DELTA"
+	DELTA                      = "Δ"
 	DELTA_DOLLAR_TITLE         = strings.Join([]string{DELTA, DOLLAR}, " ")
 	DELTA_ESTIMATED_EURO_TITLE = strings.Join([]string{DELTA, ESTIMATED_EURO}, " ")
 
-	FORECAST_DELTA_DOLLAR_TITLE = strings.Join([]string{FORECAST, DELTA, DOLLAR}, " ")
-	FORECAST_DELTA_EURO_TITLE   = strings.Join([]string{FORECAST, DELTA, ESTIMATED_EURO}, " ")
+	BUDGET_FORECAST_DELTA_DOLLAR_TITLE       = strings.Join([]string{BUDGET, "/", FORECAST, DELTA, DOLLAR}, " ")
+	BUDGET_FORECAST_DELTA_EURO_TITLE         = strings.Join([]string{BUDGET, "/", FORECAST, DELTA, ESTIMATED_EURO}, " ")
+	COST_FORECAST_DELTA_DOLLAR_TITLE         = strings.Join([]string{COST, "/", FORECAST, DELTA, DOLLAR}, " ")
+	COST_FORECAST_DELTA_ESTIMATED_EURO_TITLE = strings.Join([]string{COST, "/", FORECAST, DELTA, ESTIMATED_EURO}, " ")
 )
 
 var (
