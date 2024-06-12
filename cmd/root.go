@@ -25,7 +25,7 @@ var (
 	COST_DOLLAR_TITLE         = strings.Join([]string{COST, DOLLAR}, " ")
 	COST_ESTIMATED_EURO_TITLE = strings.Join([]string{COST, ESTIMATED_EURO}, " ")
 
-	FORECAST                      = "FCAST"
+	FORECAST                      = "FORECAST"
 	FORECAST_DOLLAR_TITLE         = strings.Join([]string{FORECAST, DOLLAR}, " ")
 	FORECAST_ESTIMATED_EURO_TITLE = strings.Join([]string{FORECAST, ESTIMATED_EURO}, " ")
 

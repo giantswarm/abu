@@ -83,8 +83,8 @@ func runBudget(cmd *cobra.Command, args []string) {
 			log.Fatal(err)
 		}
 
-		forecastDeltaDollar := limitDollar - forecastDollar
-		forecastDeltaEuro := limitEuro - forecastEuro
+		forecastDeltaDollar := forecastDollar - limitDollar
+		forecastDeltaEuro := forecastEuro - limitEuro
 
 		s := fmt.Sprintf(
 			"%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s",
