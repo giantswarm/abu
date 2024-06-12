@@ -43,8 +43,8 @@ var (
 
 	BUDGET_FORECAST_DELTA_DOLLAR_TITLE       = strings.Join([]string{BUDGET, "/", FORECAST, DELTA, DOLLAR}, " ")
 	BUDGET_FORECAST_DELTA_EURO_TITLE         = strings.Join([]string{BUDGET, "/", FORECAST, DELTA, ESTIMATED_EURO}, " ")
-	COST_FORECAST_DELTA_DOLLAR_TITLE         = strings.Join([]string{COST, "/", FORECAST, DELTA, DOLLAR}, " ")
-	COST_FORECAST_DELTA_ESTIMATED_EURO_TITLE = strings.Join([]string{COST, "/", FORECAST, DELTA, ESTIMATED_EURO}, " ")
+	BILL_FORECAST_DELTA_DOLLAR_TITLE         = strings.Join([]string{COST, "/", FORECAST, DELTA, DOLLAR}, " ")
+	BILL_FORECAST_DELTA_ESTIMATED_EURO_TITLE = strings.Join([]string{COST, "/", FORECAST, DELTA, ESTIMATED_EURO}, " ")
 )
 
 var (
