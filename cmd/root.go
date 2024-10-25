@@ -5,9 +5,11 @@ import (
 	"strings"
 	"time"
 
+	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/budgets"
 	"github.com/aws/aws-sdk-go/service/costexplorer"
+	"github.com/aws/aws-sdk-go/service/ec2"
 	"github.com/aws/aws-sdk-go/service/organizations"
 	"github.com/spf13/cobra"
 )
@@ -17,6 +19,8 @@ var (
 	ID_TITLE        = "ID"
 	MONTH_TITLE     = "MONTH"
 	SUSPENDED_TITLE = "SUSP."
+	SERVICE_TITLE   = "SERVICE"
+	REGION_TITLE    = "REGION"
 
 	DOLLAR         = "($)"
 	ESTIMATED_EURO = "(~€)"
@@ -51,6 +55,7 @@ var (
 	sess *session.Session
 
 	budgetSvc        *budgets.Budgets
+	ec2Svc           *ec2.EC2
 	costExplorerSvc  *costexplorer.CostExplorer
 	organizationsSvc *organizations.Organizations
 )
@@ -62,10 +67,12 @@ var rootCmd = &cobra.Command{
 
 func init() {
 	sess = session.Must(session.NewSessionWithOptions(session.Options{
+		Config:            aws.Config{Region: aws.String("eu-west-1")},
 		SharedConfigState: session.SharedConfigEnable,
 	}))
 
 	budgetSvc = budgets.New(sess)
+	ec2Svc = ec2.New(sess)
 	costExplorerSvc = costexplorer.New(sess)
 	organizationsSvc = organizations.New(sess)
 }
